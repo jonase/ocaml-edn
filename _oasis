@@ -13,4 +13,11 @@ Plugins: META (0.4), DevFiles (0.4)
 Library edn
   Path: src
   Modules: Edn
-  InternalModules: Common, Util, Reader, Writer, Edn_parser, Json, Read  
+  InternalModules: Common, Util, Reader, Writer, Edn_parser, Json, Read
+
+Executable test_edn
+  Path: test
+  MainIs: test.ml
+  CompiledObject: best
+  Install: false
+  BuildDepends: edn, oUnit

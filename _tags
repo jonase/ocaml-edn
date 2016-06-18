@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 9abb0a6804870f45876ed531a934c184)
+# DO NOT EDIT (digest: f48164f6d673a3d286a13f1528c38da8)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -16,6 +16,11 @@ true: annot, bin_annot
 "_darcs": not_hygienic
 # Library edn
 "src/edn.cmxs": use_edn
+# Executable test_edn
+<test/test.{native,byte}>: pkg_oUnit
+<test/test.{native,byte}>: use_edn
+<test/*.ml{,i,y}>: pkg_oUnit
+<test/*.ml{,i,y}>: use_edn
 # OASIS_STOP
 
 true: use_menhir
